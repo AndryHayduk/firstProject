@@ -16,44 +16,65 @@
 				<h2>Реєстрація</h2>
 				<span class="required_notification">Поля обовязкові для заповнення</span>
 			</li>
-			
+		<div class="tab">	
 			<li>
 				<label for="name">Ім'я:</label>
-				<input type="text" name="name" placeholder="Andry" required/>
+				<input type="text" name="this.name" placeholder="Andry" required/>
 			</li>
-			
+		
 			<li>
 				<label for="name2">Прізвище:</label>
-				<input type="text" name="name2" placeholder="Hayduk" required/>
+				<input type="text" name="this.name2" placeholder="Hayduk"  required/>
 			</li>
-			
+		</div>
+		<div class="tab">
 			<li>
 				<label for="email">Email:</label>
-				<input type="text" name="email" placeholder="email format" required/>
+				<input type="text" name="this.email" placeholder="email format"  required/>
 				<span class="form_hint">Приклад:email@something.com</span>
 			</li>
 			
 			
 			<li>
 				<label for="website">Сайт:</label>
-				<input type="text" name="website" placeholder="http://google.com" required/>
+				<input type="text" name="this.website" placeholder="http://google.com"  required/>
 				<span class="form_hint">Приклад:htpp://google.com</span>
+			</li>
+		</div>
+		<div class="tab">
+			<li>
+				<label for="start">Start date:</label>
+
+				<input type="date" id="start" name="this.trip-start" 
+				value="2020-08-31"
+				min="1960-01-01" max="2020-08-07">
 			</li>
 			
 			<li>
 				<label for="Pasword">Пароль:</label>
-				<input type="password" name="Pasword" required/>
+				<input type="password" name="this.Pasword" oninput="this.className = ''" required/>
 				
 			</li>
-			
+		</div>	
 			
 			<li>
-				<button class="submit" type="submit">submit form</button>
+				<div style="overflow:auto;">
+				
+					<button class="submit" type="submit" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+					<button class="submit" type="submit" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+					
+				</div>
+			
 			</li>
-			
-			
-		</ul>
+				
 		
+			<div style="text-align:center;margin-top:40px;">
+				<span class="step"></span>
+				<span class="step"></span>
+				<span class="step"></span>
+			</div>
+
+		</ul>
 		
 	</form>
 </body>
